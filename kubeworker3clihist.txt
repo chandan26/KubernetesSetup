@@ -1,0 +1,1000 @@
+    1  docker build -f httptsldockerfile --tag ssl_httpd .
+    2  vi httptsldockerfile 
+    3  docker build -f httptsldockerfile --tag ssl_httpd .
+    4  yum install php
+    5  cat httptsldockerfile 
+    6  echo "<?php phpinfo(); ?>"
+    7  phpinfo() ;
+    8  vi httptsldockerfile 
+    9  cat httptsldockerfile 
+   10  docker build -f httptsldockerfile --tag ssl_httpd .
+   11  docker run -itd -p 9092:80 ssl_httpd
+   12  docker ps -a
+   13  docker exec -itd 30a2b322a3b2 /bin/bash
+   14  yum install wgetdocker exec -it 30a2b322a3b2 /bin/bash
+   15  docker exec -it 30a2b322a3b2 /bin/bash
+   16  docker search https
+   17  docker search ssl
+   18  clear 
+   19  mkdir danglingimage
+   20  cd danglingimage/
+   21  vi Danglingdockerfile
+   22  docker build -f Danglingdockerfile --tag dangling .
+   23  vi Danglingdockerfile
+   24  docker build -f Danglingdockerfile --tag dangling .
+   25  docker images
+   26  vi Danglingdockerfile
+   27  docker build -f Danglingdockerfile --tag dangling .
+   28  docker images
+   29  docker rmi dangling
+   30  docker rmi d2cb92fa48c1
+   31  docker rmi 1d1201233207
+   32  docker ps -a
+   33  docker stop eb fc ed 27
+   34  docker stop 30
+   35  docker rm eb fc ed 27 30
+   36  docker rmi
+   37  docker images
+   38  docker rm 1d
+   39  docker rmi 1d
+   40  docker images
+   41  cat Danglingdockerfile
+   42  cat D
+   43  cat Danglingdockerfile 
+   44  docker images
+   45  docker rmi ssl_httpd
+   46  docker rmi testbestprac
+   47  docker images
+   48  docker rmi nginx consul continuumio/anaconda3
+   49  docker images
+   50  docker rmi nginx:alpine
+   51  docker images
+   52  cat Danglingdockerfile 
+   53  docker build -f Danglingdockerfile --tag dangling .
+   54  docker images
+   55  vi Danglingdockerfile 
+   56  cat  Danglingdockerfile 
+   57  docker build -f Danglingdockerfile --tag dangling .
+   58  docker images
+   59  docker rmi 224
+   60  docker images
+   61  vi Danglingdockerfile 
+   62  docker build -f Danglingdockerfile --tag dangling .
+   63  docker images
+   64  docker images -f dangling=true
+   65  docker images -f dangling=true -q
+   66  mkdir nginxphp
+   67  ls -lrth
+   68  cd nginxphp/
+   69  vi Dockerfile
+   70  docker build -t nginx:v1 -f Dockerfile .
+   71  docker images
+   72  docker run -itd -p 9090:80 nginx:v1
+   73  docker ps -a
+   74  docker stop 6c
+   75  docker rm 6c
+   76  docker rmi e9
+   77  vi Dockerfile 
+   78  docker build -t nginx:v1 -f Dockerfile .
+   79  docker run -itd -p 9090:80 nginx:v1
+   80  kubectl version --short
+   81  consul -v
+   82  docker run -d --name consul-01 -p 8500:8500  consul
+   83  docker run -d --name jenkins-01 -p 8080:8080  jenkins/jenkins
+   84  docker ps -a
+   85  docker exec -it jenkins-01 /bin/bash
+   86  docker rm -f jenkins-01
+   87  docker ps -a
+   88  docker rm -f fb df 1e
+   89  docker ps -a
+   90  history
+   91  docker ps -a
+   92  docker run -d --name consul-01 -p 8500:8500  consul
+   93  docker search httpd
+   94  docker run -d --name httpd -p 80:80  httpd
+   95  docker run     -d     -p 8500:8500     -p 8600:8600/udp     --name=badger     consul agent -server -ui -node=server-1 -bootstrap-expect=1 -client=0.0.0.0
+   96  docker rm -f consul
+   97  docker ps -a
+   98  docker rm -f consul httpd
+   99  docker rm -f f3
+  100  docker run     -d     -p 8500:8500     -p 8600:8600/udp     --name=badger     consul agent -server -ui -node=server-1 -bootstrap-expect=1 -client=0.0.0.0
+  101  docker ps -a
+  102  docker rm -f consul-01
+  103  docker ps -a
+  104  docker rm -f badger
+  105  docker run     -d     -p 8500:8500     -p 8600:8600/udp     --name=badger     consul agent -server -ui -node=server-1 -bootstrap-expect=1 -client=0.0.0.0
+  106  docker exec badger consul members
+  107  docker run    --name=fox    consul agent -node=client-1 -join=172.17.0.2
+  108  docker exec badger consul members
+  109  docker ps -a
+  110  docker run -d --name httpd  -p 80:80  httpd
+  111  docker exec -it httpd /bin/bash
+  112  docker ps -a
+  113  docker rm -f d9 c7 3d
+  114  docker ps -a
+  115  docker run -itd --name  httpd httpd
+  116  docker ps -a
+  117  docker run -itd --name  httpd httpd
+  118  docker rm 85
+  119  docker ps -a
+  120  docker run -itd --name  httpd httpd
+  121  docker ps -a
+  122  docker rm -f httpd
+  123  docker ps -a
+  124  docker run -itd --name  httpd httpd
+  125  docker ps -a
+  126  docker stop httpd
+  127  docker ps -a
+  128  history 
+  129  docker run -d --name jenkins-01 -p 8080:8080  jenkins/jenkins
+  130  docker run -itd --name  httpd httpd
+  131  docker ps -a -q
+  132  docker ps -a 
+  133  docker rm -f $(docker ps -a -q)
+  134  docker run -d --name jenkins-01 -p 8080:8080  jenkins/jenkins
+  135  docker ps -a q
+  136  docker ps -a
+  137  docker exec -it cb /bin/bash
+  138  docker rm -f $(docker ps -a -q)
+  139  docker run -itd --name  httpd -e "testvar=2611"  centos
+  140  docker ps -a
+  141  docker exec -it da /bin/bash
+  142  ls -lrth
+  143  mkdir dckr_env_test
+  144  ls -lrth
+  145  cd dckr_env_test/
+  146  vi Dockerfile
+  147  ls 
+  148  docker build -t envimage .
+  149  docker images
+  150  docker 
+  151  docker run -itd envimage
+  152  docker ps -a
+  153  docker exec -it 54 /bin/bash
+  154  cat Dockerfile 
+  155  docker rm -f $(docker ps -a -q)
+  156  docker images
+  157  docker run -itd envimage
+  158  docker ps -a 
+  159  docker exec -it b44ad13a0259 /bin/bash
+  160  docker rm -f $(docker ps -a -q)
+  161  docker ps -a 
+  162  docker images
+  163  docker rmi envimage  jenkins/jenkins httpd nginx consul progrium/consul
+  164  docker images
+  165  docker rmi nginx:v1
+  166  docker images
+  167  docker rmi 73effe7d6ea6
+  168  docker images
+  169  docker rmi dangling
+  170  docker images
+  171  cd
+  172  docker run -itd --name mysqltest mysql
+  173  docker ps -a
+  174  docker log mysqltest
+  175  docker logs mysqltest
+  176  mtime
+  177  yum install mtim
+  178  yum install mtime
+  179  cd dockertest/
+  180  ls -lrth
+  181  cd 
+  182  clear
+  183  docker ps -a
+  184  docker logs mysql
+  185  docker logs 4d6bd84af5eb
+  186  docker rmi mysql
+  187  docker rm mysql
+  188  docker logs mysql
+  189  docker ps -a
+  190  docker rm -f 4d6bd84af5eb
+  191  docker rmi mysql
+  192  clear
+  193  docker run -itd --name mysqltest mysql
+  194  docker ps -a
+  195  docker logs mysqltest
+  196  crontab -e
+  197  cd dockertest
+  198  pwd
+  199  crontab -e
+  200  crontab -l
+  201  ls
+  202  ls -lrth
+  203  crontab -e
+  204  cp dev.Dockerfile devdockerfile.txt
+  205  ls -lrth
+  206  date
+  207  crontab -l
+  208  crontab -e
+  209  date
+  210  crontab -l
+  211  ls -lrth
+  212  date
+  213  ls -lrth
+  214  pwd
+  215  crontab -l
+  216  ls
+  217  ls -lrth
+  218  ll
+  219  crontab -l
+  220  crontab -e
+  221  date
+  222  ls -lrth
+  223  date
+  224  crontab -l
+  225  ll
+  226  date
+  227  ;;
+  228  ll
+  229  date
+  230  ll
+  231  type file1
+  232  file1
+  233  file file1
+  234  ;;
+  235  ll
+  236  crontab -l
+  237  docker ps -a
+  238  docker rm -a
+  239  docker rm ($docker ps -a -q)
+  240  docker rm $(docker ps -a -q)
+  241  docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=secuyt -d mysql:tag
+  242  docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=secuyt -d mysql
+  243  docker ps -a
+  244  docker rm $(docker ps -a -q)
+  245  docker rm -f $(docker ps -a -q)
+  246  docker run --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt -d mysql
+  247  mysql -u root -h 127.0.0.1 -psecuyt
+  248  yum install mysql -y
+  249  mysql -u root -h 127.0.0.1 -psecuyt
+  250  docker ps -a
+  251  docker inspect some-mysql
+  252  mysql -u root -h 127.17.0.2 -psecuyt
+  253  ping 172.17.0.2
+  254  mysql -u root -h 127.17.0.2 -p
+  255  docker rm -f $(docker ps -a -q)
+  256  docker run --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt -d mysql default_authentication_plugin=mysql_native_password
+  257  mysql -u root -h 127.17.0.2 -p
+  258  docker inspect some-mysql
+  259  docker rm -f $(docker ps -a -q)
+  260  docker run --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt -d mariadb
+  261  docker inspect some-mysql
+  262  mysql -u root -h 127.17.0.2 -p
+  263  docker ps -a
+  264  docker rm -f $(docker ps -a -q)
+  265  docker run -d --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt  mysql:5.7
+  266  docker ps -a
+  267  docker inspect some-mysql
+  268  mysql -u root -h 127.17.0.2 -p
+  269  docker ps -a
+  270  docker inspect 6e
+  271  docker logs 6e
+  272  docker run -d --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt  MYSQL_USER=docker-user MYSQL_DATABASE=docker_db MYSQL_PASSWORD=secuyt mysql:5.7
+  273  docker run -d --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt  -e MYSQL_USER=docker-user -e MYSQL_DATABASE=docker_db -e MYSQL_PASSWORD=secuyt mysql:5.7
+  274  docker rm -f $(docker ps -a -q)
+  275  docker run -d --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt  MYSQL_USER=docker-user MYSQL_DATABASE=docker_db MYSQL_PASSWORD=secuyt mysql:5.7
+  276  docker run -d --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt  -e MYSQL_USER=docker-user -e MYSQL_DATABASE=docker_db -e MYSQL_PASSWO
+  277  docker ps -a
+  278  docker logs 9b
+  279  docker inspect 9b
+  280  mysql -u docker-user -h 127.17.0.2 -p
+  281  ip addr
+  282  mysql -u docker-user -h 10.190.0.4 -p
+  283  docker rm -f $(docker ps -a -q)
+  284  docker run -d --name postgresdb -e POSTGRES_PASSWORD=12345678 -e POSTGRES_USER=docker_user -e POSTGRES_PASSWORD=12345678 -e POSTGRES_DB=dockerdb postgres
+  285  docker ps -a
+  286  docker -it 0d bash
+  287  docker ps -a
+  288  docker -it 0dbc9793796a bash
+  289  docker exec -it 0dbc9793796a bash
+  290  docker rm -f $(docker ps -a -q)
+  291  docker run -d --name postgresdb -e POSTGRES_PASSWORD=12345678 -e POSTGRES_USER=docker_user -e POSTGRES_PASSWORD=12345678 -e POSTGRES_DB=docker_db postgres
+  292  docker ps -a
+  293  docker exec -it 31 bash
+  294  cd /proc/
+  295  ls -;rth
+  296  ls -rth
+  297  ls -lrth
+  298  cat diskstats 
+  299  cat cpuinfo 
+  300  ls -lrth
+  301  cd fs
+  302  ls -ltrh
+  303  cd nfsd
+  304  ls -;rth
+  305  ls -lrth
+  306  cd ../../
+  307  ls -rth
+  308  cd cgroups
+  309  cat cgroups
+  310  ls -rthl
+  311  cat uptime 
+  312  docker ps -a
+  313  docker rm -f $(docker ps -a -q)
+  314  grep "model name" /proc/spuinfo
+  315  grep "model name" /proc/cpuinfo
+  316  free -h
+  317  docker run -itd --name nginx nginx:nginx
+  318  docker run -itd --name nginx ngnix:alpine
+  319  docker run -itd --name nginx nginx:alpine
+  320  docker ps -a
+  321  docker stats 8c
+  322  docker run --help | grep memory
+  323  docker run --help | grep cpu
+  324  docker ps -a
+  325  docker stats 8c9b988a4c56
+  326  docker run -itd --name mysql mysql:5.7
+  327  docker ps -a
+  328  docker run -d --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt  -e MYSQL_USER=docker-user -e MYSQL_DATABASE=docker_db
+  329  docker run -d --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt  -e MYSQL_USER=docker-user -e MYSQL_DATABASE=docker_db mysql:5.7
+  330  docker ps -a
+  331  docker stats cc4f58ce0765
+  332  docker run -d --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt  -e MYSQL_USER=docker-user -e MYSQL_DATABASE=docker_db --memory "150mb" mysql:5.7
+  333  docker run -d --name mem_lim_mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secuyt  -e MYSQL_USER=docker-user -e MYSQL_DATABASE=docker_db --memory "150mb" mysql:5.7
+  334  docker run -d --name mem_lim_mysql -p 3308:3306 -e MYSQL_ROOT_PASSWORD=secuyt  -e MYSQL_USER=docker-user -e MYSQL_DATABASE=docker_db --memory "150mb" mysql:5.7
+  335  docker ps -a
+  336  docker rm -f 1ade8ab2ae80 cc4f58ce0765
+  337  docker run -d --name mem_lim_mysql -p 3308:3306 -e MYSQL_ROOT_PASSWORD=secuyt  -e MYSQL_USER=docker-user -e MYSQL_DATABASE=docker_db --memory "150mb" mysql:5.7
+  338  docker ps -a
+  339  docker stats ea90952414ac
+  340  docker ps -a
+  341  docker rm -f $(docker ps -a -q)
+  342  docker run -itd --name apache apache
+  343  docker run -itd --name apache httpd
+  344  docker rm -f $(docker ps -a -q)
+  345  docker run -itd --name apache -p 8080:80 httpd
+  346  echo "Tried with copy files using docker cp " > index.html
+  347  ls -lrth
+  348  docker ps -a
+  349  docker cp index.html apache:/var/www/html/
+  350  docker exec -it apache /bin/bash
+  351  docker cp index.html apache:/usr/local/apache2/htdocs/
+  352  cat index.html 
+  353  docker exec -it apache /bin/bash
+  354  docker ps -a
+  355  docker commit apache commit_test_apacheimage
+  356  docker images
+  357  docker run -itd commit_test_apacheimage --name checkimage
+  358  docker run -itd --name test_image commit_test_apacheimage 
+  359  docker ps -a
+  360  docker rm -a a4321052a070
+  361  docker rm -f a4321052a070
+  362  docker ps -a
+  363  docker exec -it 1dbe2c109539 /bin/bash
+  364  docker rm -f $(docker ps -a -q)
+  365  docker run -d --name centoscmdskip centos python -m SimpleHTTPServer 8000
+  366  docker rm -f $(docker ps -a -q)
+  367  docker run -d --name centoscmdskip centos 
+  368  docker ps -a
+  369  docker rm -f $(docker ps -a -q)
+  370  docker run -itd --name centoscmdskip centos 
+  371  docker ps -a
+  372  docker exec -it af0481f19566 /bin/bash
+  373  docker rm -f $(docker ps -a -q)
+  374  docker run -itd --name centoscmdskip centos /bin/bash
+  375  docker rm -f $(docker ps -a -q)
+  376  docker run -itd --name centoscmdskip centos /bin/zsh
+  377  docker rm -f $(docker ps -a -q)
+  378  docker run -itd --name centoscmdskip centos echo "Hello no"
+  379  docker ps -a
+  380  docker rm -f $(docker ps -a -q)
+  381  clear
+  382  docker run -itd --name centoscmdskip centos 
+  383  docker ps -a
+  384  docker run -itd --name centoscmdskip centos echo "Hello no"
+  385  docker rm -f $(docker ps -a -q)
+  386  clear
+  387  docker ps -a
+  388  docker run -itd --name centos centos 
+  389  docker ps -a
+  390  docker run -itd --name centoscmdcheck centos echo "Hello no"
+  391  docker ps -a
+  392  docker run --rm n -it --name centos_rm_auto_destr centos 
+  393  docker run --rm  -it --name centos_rm_auto_destr centos 
+  394  docker ps -a
+  395  docker rm -f $(docker ps -a -q)
+  396  docker ps -a
+  397  docker run -itd --name centoscmdcheck centos echo "Hello no"
+  398  docker ps -a
+  399  docker run --rm  -it --name centos_rm_auto_destr centos 
+  400  docker ps -a
+  401  cd /var/lib/docker/
+  402  ls -lrth
+  403  cd image/
+  404  ls -lrth
+  405  cd ../../
+  406  cd docker/
+  407  cd volumes/
+  408  ls -;rth
+  409  ls -rth
+  410  cd..
+  411  cd ..
+  412  ls -rth
+  413  ls -rthl
+  414  cd buildkit/
+  415  ls -lrth
+  416  cd executor/
+  417  ls -lrth
+  418  cd ..
+  419  cd content/
+  420  ls
+  421  cd in
+  422  cd ingest/
+  423  ls
+  424  docker ps -a
+  425  docker rm -f $(docker ps -a -q)
+  426  cd
+  427  ls -lrth
+  428  cd dckr_env_test/
+  429  ls -lrth
+  430  cd
+  431  cd Dockerimage1
+  432   ls -rthl
+  433  cd ..
+  434  ls dockimgbstprc
+  435  ls -thrl
+  436  cd Dockerimage1/
+  437  ls 
+  438  cd ..
+  439  cd /var/log/
+  440   ls -lrth
+  441  cd tuned/
+  442  ls -rthl
+  443  cd 
+  444  cd snap
+  445  ls -lrth
+  446  cd gh
+  447  ls
+  448  ls -lrth
+  449  cd common/
+  450  ls -lrth
+  451  cd /mnt/
+  452  ls -lrth
+  453  mkdir prst_mysql
+  454  ls -lrth
+  455  docker ps -a
+  456  docker run --rm  -itd -v /mnt/prst_mysql/:/var/lib/mysql --name mysql_vol_check MYSQL_ROOT_PASSWORD=secuyt mysql:5.7
+  457  docker run  -itd -v /mnt/prst_mysql/:/var/lib/mysql --name mysql_vol_check MYSQL_ROOT_PASSWORD=secuyt mysql:5.7
+  458  docker run  -d -v /mnt/prst_mysql/:/var/lib/mysql --name mysql_vol_check MYSQL_ROOT_PASSWORD=secuyt mysql:5.7
+  459  docker run  -itd -v /mnt/prst_mysql/:/var/lib/mysql --name mysql_vol_check -e MYSQL_ROOT_PASSWORD=secuyt mysql:5.7
+  460  docker ps -a
+  461  docker logs 9c
+  462  docker inspect 9c
+  463  mysql -u root -h 172.17.0.2 -p
+  464  ls -lrth
+  465  cd prst_mysql/
+  466  ls -lrth
+  467  pwd
+  468  docker volume --help
+  469  docker prune
+  470  docker prune --help
+  471  cd
+  472  clear
+  473  docker volume create perst_vol_chk
+  474  cd /var/lib/docker/
+  475  ls -lrth
+  476  cd volumes/
+  477  ls - lrth
+  478  ls -lrth
+  479  docker volumes ls
+  480  docker volume ls
+  481  docker run  -itd -v perst_vol_chk:/var/lib/mysql --name mysql_vol_check -e MYSQL_ROOT_PASSWORD=secuyt mysql:5.7
+  482  docker run  -itd -v perst_vol_chk:/var/lib/mysql --name vol_create_check -e MYSQL_ROOT_PASSWORD=secuyt mysql:5.7
+  483  cd perst_vol_chk
+  484  ls -lrth
+  485  cd _data
+  486  ls -lrth
+  487  pwd
+  488  cd..
+  489  cd ..
+  490  ls -lrth
+  491  pwd
+  492  cd /var/lib/docker/volumes/perst_vol_chk/_data
+  493  ls -lrth
+  494  docker volume ls
+  495  docker ps -a
+  496  docker rm -f 9e 9c
+  497  docker volume rm fb f3 ec e4 e3 d0 ce be bc ad aa a7 00 99 60 23 49 71  65 52
+  498  docker volume rm fb752617c38f0622dc14aa0a891b9bbddec96efb198cbe7d72b2e94bbb661963  f392d15e65a97a5a535d275f0ebaec199dd12b399b5cc6e4a6ac304765f2c4bb  ec2af16e0ad51246ca09cc521f4fe6e3272a694057797d3110f3e9c1f7ac60b7 e428d2b19d4ff98e80abf016563cc77ca9e34ebe27eee7cbdf0f299a28f4d163 
+  499  docker volume rm e39a8d2bfac7d24831fd1eb736e9f9681395b3e8c5e13e33ce4176f025655521  d001ae8b629c65502fafada14b45dc555be8c26a2ef8273d1173e401fe45bab7 ce3da780538ae59636df1784995039447e97d450524fec5e63ffff23c3b036fb be71259b4fb3413a398ab7cb1ad4a19af7d094d92b8abdcd16be99857d02b642 bcb3bd472f18807ebe9f90044e7d745065fe3e6fa5bd6281cbe35ad476422b68
+  500  docker volume rm ad7a2b3b3ccf5a46d17131c0c44712427430d2abaadea2af12348cd9b8d95469 aa9b6331a75c2af24017eacaf6555575efb533a7f63e2d4ea3b5a45c58c1f2e5 a7d995c5f4c089a601f72693b8a5c33b625366a7b7b9304abbf67e28f62cd72a 001786693bb75fa61767c69564df57aba45dd444082b3071519c3455b796cd44 99713b9db98da2eff079188991ccca8f465cc90119e57e6dab03e76e1287d18b 6097e79e34fd8a35c26139beaad86ef8d971453baf7b8ab25fa2ae83ad6af744 
+  501  docker volume rm 2301ef71e51d379b41e61010a8a9b9374c2b62c37587865cc525879d7fb05ce5 
+  502  docker volume ls
+  503  docker volume rm 493abaa58f42fa522578812c715dbb2089ced9db5867057860d5eee43bb8db33  71e02823b26190821a84875d7f594d762526f69d161fca1de9dfca9d9cf2684a 65f8697de91682945ff5e3d0148b5c04b7a5abcd93045d8c6acdb5f1ff54178f 52b04a670e76cc28b66d77241f4eb15703a6d98ee27a48eb7b595f3cfbf8e6bd 47f1d9400559d1a0d9cbe9f6dcb8b1a59123db66ed5ecf01aaad684b13b32429 5a8f03122b70eef5abd3e910a0d30e43e9c207638d049ee64be1869692bae36a 4b61d4102962ec2804f43c3024cdc345928666e5ba4a2df987983c46ee6b2102 4aaee7a0debee5230fd46d6e9e127055009190c89688ba907e6f083bf25b29a4 3fa4173324cda7eab0fba60f996da250f385f1ad1024359f08bcd0411a2e7c90 2dc10ef15d465052d6ee923ffebb2b756558c84bb8f93659328aa82019c09843 perst_vol_chk
+  504  docker volume ls
+  505  docker run -d -e MYSQL_ROOT_PASSWORD=1234 --name mysql -v /var/lib/mysql mysql:5.7
+  506  docker volume ls
+  507  docker inspect mysql
+  508  docker inspect mysql | grep mounts
+  509  docker inspect mysql | grep -i mounts
+  510  cd /var/lib/docker/volumes/6f65890d2dd748be8a33a3d13e4d610684ad74b
+  511  cd /var/lib/docker/volumes/
+  512  ls -rthl
+  513  cd 6f65890d2dd748be8a33a3d13e4d610684ad74bd8287fdf2273f3ee128ba3a98
+  514  ls -lrth
+  515  pwd
+  516  cd _data/
+  517  ls -lrth
+  518  docker volume ls
+  519  pwd
+  520  docker ps -a
+  521  docker rm -f mysql
+  522  ls -lrth
+  523  cd ..
+  524  ls lrth
+  525  ls -lrth
+  526  cd _data
+  527  ls -lrth
+  528  cd
+  529  docker ps -a
+  530  docker run -d -e MYSQL_ROOT_PASSWORD=1234 --name mysql mysql:5.7
+  531  docker run -itd --name centos centos1
+  532  docker run -itd --name centos1 centos
+  533  docker run -itd --name centos2 centos
+  534  docker ps -a
+  535  docker rm -f $(docker ps -a)
+  536  docker rm -f $(docker ps -a -q)
+  537  docker ps -a
+  538  docker volume ls
+  539  docker volume ls -f=dangling=true
+  540  docker ps -a
+  541  docker run -itd --name centos1 centos
+  542  docker run -itd --name centos2 centos
+  543  docker run -itd --name centos3 centos
+  544  docker ps -a
+  545  docker volume ls
+  546  docker ps -a
+  547  docker volume ls
+  548  docker rm -fv $(docker ps -a -q)
+  549  docker volume ls
+  550  docker rm -v 6f65890d2dd748be8a33a3d13e4d610684ad74bd8287fdf2273f3ee128ba3a98 77da132c4aeb68c59caaa8a722d10690a7c035465be328210d941a466f53c3e2
+  551  history 
+  552  docker volume ls
+  553  docker volume rm 6f65890d2dd748be8a33a3d13e4d610684ad74bd8287fdf2273f3ee128ba3a98 77da132c4aeb68c59caaa8a722d10690a7c035465be328210d941a466f53c3e2
+  554  docker volume ls
+  555  docker run -itd --name centos1 centos
+  556  docker run -itd --name centos2 centos
+  557  docker run -itd --name centos3 centos
+  558  docker volume ls
+  559  cd /var/lib/docker/
+  560  cd volumes/
+  561  ls -lrth
+  562  docker logs centos2
+  563  docker inspect centos2
+  564  docker ps -a
+  565  docker run -itd --name mysql1 mysql
+  566  docker volume ls
+  567  docker inspect mysql1
+  568  docker volume ls
+  569  docker rm -f $(docker ps -a -q)
+  570  docker ps -a
+  571  docker volume ls -f=dangling=true
+  572  docker rm volume $(docker volume ls -f=dangling=true)
+  573  docker rm volume $(docker volume ls -f=dangling=true -q)
+  574  docker run -itd --name mysql1 mysql
+  575  docker run -itd --name mysql2 mysql
+  576  docker volume ls 
+  577  docker ps -a
+  578  docker volume ls 
+  579  docker volume rm 670a3ff1b8535d7da671a8f11c061dc8c70009dc2b3664b8be1fd512d3a6dc94
+  580  docker volume rm -f 670a3ff1b8535d7da671a8f11c061dc8c70009dc2b3664b8be1fd512d3a6dc94
+  581  docker rm -f mysql1, mysql2
+  582  docker rm -f mysql1 mysql2
+  583  ls -arth
+  584  cd 
+  585  ls -arth
+  586  ls -arthl
+  587  cat .bash_history
+  588  ls -arthl
+  589  cat .mysql_history
+  590  cd nginxphp/
+  591  ls -lrht
+  592  docker ps -a
+  593  history | grep -i "MYSQL"
+  594  docker volume ls 
+  595  docker volume rm 670a3ff1b8535d7da671a8f11c061dc8c70009dc2b3664b8be1fd512d3a6dc94 3098ec140fc16d12d35ce214cc9401a96cdbd87c310d4223787ef8fe9ff2a089 44607e499a4a861fb4f64e2b618bd505ea10be9c92efdd1cb10b50cfc3d83cac 
+  596  docker run -d -e MYSQL_ROOT_PASSWORD=1234 --name mysql1 mysql:5.7
+  597  docker run -d -e MYSQL_ROOT_PASSWORD=1234 --name mysql2 mysql:5.7
+  598  docker run -d -e MYSQL_ROOT_PASSWORD=1234 --name mysql3 mysql:5.7
+  599  docker volume ls 
+  600  docker rm -s mysql3 mysql2 mysql1
+  601  docker rm -f mysql3 mysql2 mysql1
+  602  docker volume ls -f=dangling=true -q
+  603  docker volume ls -f=dangling=true 
+  604  docker rm volume $(docker volume ls -f=dangling=true -q)
+  605  docker volume ls
+  606  docker volume rm $(docker volume ls -f=dangling=true -q)
+  607  history 
+  608  cd /mnt/prst_mysql/
+  609  cd  ..
+  610  ls -lrth
+  611  mkdir jenkins
+  612  cd jenkins/
+  613  pwd
+  614  docker run -d -name jenkins -p 8080:8080 /mnt/jenkins:/var/jenkins_home jenkins/jenkins
+  615  docker run -d --name jenkins -p 8080:8080 /mnt/jenkins:/var/jenkins_home jenkins/jenkins
+  616  docker run -d --name jenkins -p 8080:8080 -v /mnt/jenkins:/var/jenkins_home jenkins/jenkins
+  617  docker ps -a
+  618  docker logs jenkins
+  619  cd ..
+  620  ls jenkins/
+  621  ll jenkins/
+  622  ll
+  623  docker ps -a
+  624  docker run -ti --name jenkins -p 8080:8080 -v /mnt/jenkins:/var/jenkins_home jenkins/jenkins
+  625  docker run -ti --name jenkins1 -p 8080:8080 -v /mnt/jenkins:/var/jenkins_home jenkins/jenkins
+  626  docker run -ti jenkins/jenkins bash
+  627  docker ps -a
+  628  docker rm -fv $(docker ps -a -q)
+  629  docker volume ls
+  630  docker run -ti --name jenkins1 -p 8080:8080 -v /mnt/jenkins:/var/jenkins_home jenkins/jenkins
+  631  chown 1000:1000 -R /mnt/jenkins/ -R
+  632  ll
+  633  docker run -ti --name jenkins1 -p 8080:8080 -v /mnt/jenkins:/var/jenkins_home jenkins/jenkins
+  634  docker ps -a
+  635  docker rm -fv $(docker ps -a -q)
+  636  docker run -ti --name jenkins1 -p 8080:8080 -v /mnt/jenkins:/var/jenkins_home jenkins/jenkins
+  637  docker ps -a
+  638  docker rm jenkins1
+  639  cd jenkins/
+  640  ll
+  641  docker run -d --name jenkins1 -p 8080:8080 -v /mnt/jenkins:/var/jenkins_home jenkins/jenkins
+  642  docker ps -a
+  643  docker rm jenkins1
+  644  history 
+  645  cd /mnt/
+  646  ls -lrth
+  647  mkdir common
+  648  ls -lrth
+  649  docker run -d --name web-p 8080:80 -v /mnt/common:/vr/www/html httpd
+  650  docker run -d --name web -p 8080:80 -v /mnt/common:/vr/www/html httpd
+  651  docker ps -a
+  652  cd common/
+  653  ls -lrth
+  654  docker rm -fv $(docker ps -a -q)
+  655  docker run -d --name web -p 8080:80 -v /mnt/common:/var/www/html httpd
+  656  docker ps -a
+  657  ls
+  658  docker exec -it web /bin/bash
+  659  docker rm -fv $(docker ps -a -q)
+  660  docker run -d --name web -p 8080:80 -v /mnt/common:/usr/local/apache2/htdocs httpd
+  661  ls -lrth
+  662  cd ..
+  663  cd -
+  664  ls -rthl
+  665  docker exec -it web /bin/bash
+  666  ls-lrth
+  667  ls -lrth
+  668  history | grep -i "var/lib/"
+  669  docker run  -d -v /mnt/common:/var/lib/mysql --name mysql_common_vol_check -e MYSQL_ROOT_PASSWORD=secuyt mysql:5.7
+  670  ls lrth
+  671  ls -lrth
+  672   mysql -u root -h 172.17.0.2 -p
+  673  docker logs mysql_common_vol_check
+  674  docker ps -a
+  675  docker inspect mysql_common_vol_check
+  676  ls
+  677  rm -rf in
+  678  rm -rf index.html 
+  679  docker run  -d -v /mnt/common:/var/lib/mysql --name mysql_common_vol_check2 -e MYSQL_ROOT_PASSWORD=secuyt mysql:5.7
+  680  docker ps -a
+  681  docker rm ce8921404bbb
+  682  docker ps -a
+  683  docker exec -it web /bin/bash
+  684  ls -lrth
+  685   mysql -u root -h 172.17.0.2 -p
+  686  docker logs mysql_common_vol_check2
+  687  docker inspect mysql_common_vol_check2
+  688   mysql -u root -h 172.17.0.3 -p
+  689  ls -lrth
+  690  pwd
+  691  cat index.html 
+  692  ip a | grep docker
+  693  docker ps -a
+  694  docker rm -f $(docker ps -a -q)
+  695  docker network ls
+  696  docker inspect network 7a1f943991c3
+  697  docker run -dti centos
+  698  docker ps -a
+  699  docker inspect ef
+  700  docker network ls
+  701  docker ps -a
+  702  docker run -dti centos
+  703  docker ps -a
+  704  docker inspect f5
+  705  docker ps -a
+  706  docker inspect c4
+  707  docker ps -a
+  708  docker ps ef
+  709  docker inspect ef
+  710  docker ps -a
+  711  docker exec ef bash -c "ping 172.17.0.2"
+  712  docker exec ef bash -c "ping 172.17.0.3"
+  713  docker exec ef bash -c "ping 172.17.0.4"
+  714  echo "docker conatainers can not communicate using the hostname it wont work"
+  715  echo " in default network only way to communicate is usin IP"
+  716  docker inspect ef | grep IP
+  717  docker inspect c4 | grep IP
+  718  docker network create --help
+  719  docker network ls 
+  720  docker network inspect bridge
+  721  docker network create -d bridge  --subnet 172.18.0.0/16 --gateway 172.18.0.1  new_network
+  722  docker network ls 
+  723  docker network inspect new_network 
+  724  docker network rm new_network 
+  725  docker network ls 
+  726  docker network create -d bridge  --subnet 172.18.0.0/16 --gateway 172.18.0.1  new_network
+  727  docker network ls 
+  728  docker ps -a
+  729  docker rm -f $(docker ps -a -q)
+  730  docker run -dti --network new_network --name centos1 centos
+  731  docker run -dti --network new_network --name centos2 centos
+  732  docker ps -a
+  733  docker inspect 15
+  734  docker ps -a
+  735  docker inspect 29
+  736  docker inspect new_network 
+  737  docker exec  centos1 bash -c "ping centos2"
+  738  docker exec  centos2 bash -c "ping centos1"
+  739  docker network create -d bridge  --subnet 172.30.0.0/16 --gateway 172.30.0.1  new_net1
+  740  docker run -dti --network new_net1 --name net1_centos centos
+  741  docker run -dti --network new_net1 --name net2_centos centos
+  742  docker exec  centos1 bash -c "ping net1_centos"
+  743  docker network connect new_net1 centos1
+  744  docker exec  centos1 bash -c "ping net1_centos"
+  745  docker exec  net1_centos bash -c "ping centos1"
+  746  docker network disconnect new_net1 centos1
+  747  docker exec  net1_centos bash -c "ping centos1"
+  748  cd /usr/local/bin/
+  749  ls 
+  750  ls -lrth
+  751  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  752  sudo chmod +x /usr/local/bin/docker-compose
+  753  sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  754  docker-compose --version
+  755  sudo curl     -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/bash/docker-compose     -o /etc/bash_completion.d/docker-compose
+  756  cd /etc/
+  757  ls -lrth | grep bash
+  758  docker-compose 
+  759  docker-compose version
+  760  mkdir docker-compose
+  761  ls -lrth
+  762  cat google_instance_id 
+  763  vi google_instance_id 
+  764  cd docker-compose/
+  765  ll
+  766  vi docker-compose.yml
+  767  ls 
+  768  ls -lth
+  769  mkdir docker-compose
+  770  mv docker-compose.yml docker-compose/
+  771  cd docker-compose/
+  772  ls
+  773  docker-compose up -d
+  774  vi docker-compose.yml
+  775  docker-compose up -d
+  776  docker ps -a
+  777  ls -lrth
+  778  cd docker-compose/
+  779  ls -rlth
+  780  mv docker-compose.yml docker-compose_yml_basic_part
+  781  vi docker-compose.yml
+  782  docker-compose up -d
+  783  docker ps -a
+  784  docker exec -it mysqldb bash
+  785  mv docker-compose.yml docker-compose-mysql-deploy-env-var.yml
+  786  ls -lrth
+  787  cat docker-compose_yml_basic_part 
+  788  docker rm -f $(docker ps -a -q)
+  789  docker-compose -f docker-compose-mysql-deploy-env-var.yml up
+  790  docker-compose -f docker-compose-mysql-deploy-env-var.yml -d up
+  791  docker-compose -f docker-compose-mysql-deploy-env-var.yml up -d
+  792  docker-compose -f docker-compose-mysql-deploy-env-var.yml down
+  793  ll
+  794  cat docker-compose-mysql-deploy-env-var.yml 
+  795  docker rm -f $(docker ps -a -q)
+  796  docker ps -a
+  797  ls -lrth
+  798  cd docker-compose/
+  799  ls -lrth
+  800  ls /opt/
+  801  mkdir /opt/mysql
+  802  ls /opt/
+  803  cd /opt/mysql/
+  804  pwd
+  805  cd 
+  806  cd docker-compose/
+  807  vi docker-compose.yml
+  808  docker-compose up -d
+  809  docker ps -a
+  810  cd /opt/mysql/
+  811  ls -lrth
+  812  cd
+  813  cd docker-compose/
+  814  ls -lrth
+  815  cat docker-compose.yml 
+  816  yum install git
+  817  cd /opt/mysql/
+  818  ls -lrth
+  819  pwd
+  820  cd
+  821  cd docker-compose/
+  822  ls -lrth
+  823  mv docker-compose.yml docker-compose-volume-attach.yml
+  824  vi docker-compose.yml
+  825  vi docker-compose.yml\
+  826  docker-compose up -d
+  827  vi docker-compose.yml
+  828  docker-compose up -d
+  829  docker ps -a
+  830  docker rm -f $(docker ps -a -q)
+  831  docker ps -a
+  832  docker-compose up -d
+  833  docker volume ls
+  834  git init 
+  835  ll
+  836  git add docker-compose-mysql-deploy-env-var.yml
+  837  git add docker-compose-volume-attach.yml
+  838  git add docker-compose_yml_basic_part
+  839  git remote add origin https://github.com/chandan26/DockerKubernetes_training.git
+  840  git commit -m "first commit for Yaml"
+  841  git push -u origin main
+  842  git commit -m "first commit for Yaml"
+  843  git add docker-compose_yml_basic_part
+  844  git add docker-compose-volume-attach.yml
+  845  git add docker-compose-mysql-deploy-env-var.yml
+  846  git branch -M main
+  847  git remote add origin https://github.com/chandan26/DockerKubernetes_training.git
+  848  git push -u origin main
+  849  ll
+  850  docker-compose down 
+  851  mv docker-compose.yml docker-compose-volume-create-container.yml
+  852  git add docker-compose-volume-create-container.yml
+  853  git commit 
+  854  git commit -m " commit for Yaml volume generetaion"
+  855  git push -u origin main
+  856  cd 
+  857  ls
+  858  ls -lrth
+  859  cd Dockerimage1/
+  860  ls -lrth
+  861  cat Dockerfile 
+  862  cd
+  863  cd dockercmdtest/
+  864  ls
+  865  cat devinfra 
+  866  cd 
+  867  cd dockertest/
+  868  ls
+  869  cd
+  870  cd dckr_env_test/
+  871  ll
+  872  cat Dockerfile 
+  873  git init
+  874  git add Dockerfile
+  875  git commit -m " Dockerfile for ENV, CMD commands in it"
+  876  git push -u origin main
+  877  git remote add origin https://github.com/chandan26/DockerKubernetes_training.git
+  878  git push -u origin main
+  879  git add Dockerfile
+  880  git push -u origin main
+  881  git commit
+  882  git status
+  883  history | grep git
+  884  git add Dockerfile
+  885  git remote add origin https://github.com/chandan26/DockerKubernetes_training.git
+  886  git commit -m "first commit for DockerFile"
+  887  git branch -M main
+  888  git push -u origin main
+  889  git pull
+  890  git pull main
+  891  pwd
+  892  ls
+  893  mv /root/dckr_env_test/Dockerfile /root/docker-compose/
+  894  cd /root/dckr_env_test/
+  895  cd /root/docker-compose/
+  896  ls
+  897  ls -lrth
+  898  git add Dockerfile
+  899  git commit -m " Docker imgae Build file example"
+  900  git push -u origin main
+  901  git status
+  902  vi docker-compose.yml
+  903  docker-compose up -d
+  904  vi docker-compose.yml
+  905  docker-compose up -d
+  906  docker network ls
+  907  docker volume ls
+  908  docker ps -a
+  909  docker inspect docker-compose_test_net
+  910  docker exec httpd_cont -c "ping mysqldb"
+  911  docker exec -ti httpd_cont bash -c "ping mysqldb"
+  912  docker ps -a
+  913  cd docker-compose/
+  914  ls
+  915  ls -lrth
+  916  vi docker-compose.yml 
+  917  docker-compose up -d
+  918  docker ps -a
+  919  history 
+  920  docker ps -a
+  921  docker rm -f $(docker ps -a -q)
+  922  cd docker-compose/
+  923  ls -lrth
+  924  vi docker-compose.yml 
+  925  docker-compose up -d
+  926  docker ps -a
+  927  docker exec -ti centos1 bash -c "ping centos2"
+  928  docker exec -ti centos2 bash -c "ping centos1"
+  929  cat docker-compose.yml 
+  930  docker exec -ti centos2 bash -c "ping web"
+  931  cd docker-compose/
+  932  ll
+  933  cat docker-compose.yml 
+  934  cd
+  935  mkdir docker-compose-wpremysql
+  936  cd docker-compose-wpremysql/
+  937  echo > docker-compose.yml
+  938  ll
+  939  cat docker-compose.yml 
+  940  docker ps -a
+  941  docker rm -f $(docker ps -a -q)
+  942  pwd
+  943  mkdir html
+  944  mkdir mysql
+  945  cd html/
+  946  pwd
+  947  cd ..
+  948  ll
+  949  vi docker-compose.yml 
+  950  docker-compose up -d
+  951  rm docker-compose.yml 
+  952  vi docker-compose.yml
+  953  docker-compose up -d
+  954  rm -rf docker-compose.yml 
+  955  vi docker-compose.yml
+  956  docker-compose up -d
+  957  rm -rf docker-compose.yml 
+  958  vi docker-compose.yml
+  959  docker-compose up -d
+  960  docker ps -a
+  961  docker rm -f $(docker ps -a -q)
+  962  vi docker-compose.yml
+  963  docker-compose up -d
+  964  vi docker-compose.yml
+  965  rm -rf docker-compose.yml 
+  966  vi docker-compose.yml
+  967  docker-compose up -d
+  968  echo > docker-compose.yml 
+  969  vi docker-compose.yml
+  970  docker-compose up -d
+  971  echo > docker-compose.yml 
+  972  vi docker-compose.yml
+  973  docker-compose up -d
+  974  echo > docker-compose.yml 
+  975  vi docker-compose.yml
+  976  docker-compose up -d
+  977  docker ps -a
+  978  docker-compose down 
+  979  ll
+  980  cd data/
+  981  ll
+  982  cd html
+  983  cd ..
+  984  cd html/
+  985  ll
+  986  ls -lrth
+  987  ll
+  988  cd docker-compose-wpremysql/
+  989  ll
+  990  mv docker-compose.yml docker-compose-wp-web-mysqldb-deploy.yml
+  991  mv docker-compose-wp-web-mysqldb-deploy.yml /root/docker-compose/
+  992  cd /root/docker-compose
+  993  ll
+  994  git add docker-compose-wp-web-mysqldb-deploy.yml
+  995  git commit -m "wordpress and mysql depyment yml  file"
+  996  history 
+  997  history | grep "git push"
+  998  git push -u origin main
+  999  history 
+ 1000  history >> kubeworker3clihist.txt
