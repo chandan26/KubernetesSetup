@@ -1,0 +1,27 @@
+    1  systemctl status docker
+    2  kubeadm join 10.190.0.2:6443 --token ueuvc9.2oby0k3xqcin9yh3 --discovery-token-ca-cert-hash sha256:1296448369674fd050c342e55157054798f64dd499ec8443f4f6dbea47848646
+    3  cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+    4  [kubernetes]
+    5  name=Kubernetes
+    6  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+    7  enabled=1
+    8  gpgcheck=1
+    9  repo_gpgcheck=1
+   10  gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+   11  EOF
+   12  sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+   13  vi /etc/selinux/config 
+   14  yum install -y kubelet kubeadm kubectl
+   15  systemctl start kubelet
+   16  systemctl enable kubelet
+   17  kubeadm join 10.190.0.2:6443 --token ueuvc9.2oby0k3xqcin9yh3 --discovery-token-ca-cert-hash sha256:1296448369674fd050c342e55157054798f64dd499ec8443f4f6dbea47848646
+   18  rpm -qa | grep kube
+   19  curl http://localhost:30000
+   20  ls -lrth
+   21  cd
+   22  ls -lrth /
+   23  cd hostvol
+   24  exit
+   25  docker ps -a
+   26  history 
+   27  history  >> kubeworker1clihist.txt
