@@ -1,0 +1,26 @@
+    1  vi /etc/selinux/config 
+    2  cat /etc/selinux/config 
+    3  yum install -y kubelet kubeadm kubectl
+    4  systemctl start kubelet
+    5  yum install -y kubelet kubeadm kubectl
+    6  rpm -qa| grep kube
+    7  yum install -y kubelet kubeadm 
+    8  kubeadm reset
+    9  cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+   10  [kubernetes]
+   11  name=Kubernetes
+   12  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+   13  enabled=1
+   14  gpgcheck=1
+   15  repo_gpgcheck=1
+   16  gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+   17  EOF
+   18  sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+   19  yum install -y kubelet kubeadm kubectl
+   20  rpm -qa| grep kube
+   21  systemctl start kubelet
+   22  systemctl enable kubelet
+   23  kubeadm join 10.190.0.2:6443 --token 0rv9d5.mfwx0arf2uyngqo3 --discovery-token-ca-cert-hash sha256:1296448369674fd050c342e55157054798f64dd499ec8443f4f6dbea47848646
+   24  docker ps -a
+   25  history 
+   26  history  >> kubeworker2clihist.txt
