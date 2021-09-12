@@ -1,0 +1,85 @@
+    1  cd
+    2  vi /etc/ssh/sshd_config 
+    3  passwd
+    4  systemctl restart sshd
+    5  systemctl enable sshd
+    6  exit
+    7  sudo yum install -y yum-utils
+    8  sudo yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+    9  sudo yum install docker-ce docker-ce-cli containerd.io
+   10  systemctl enable docker
+   11  rpm -qa | grep docker
+   12  sudo yum install -y yum-utils
+   13  systemctl enable docker
+   14  systemctl start docker
+   15  cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+   16  [kubernetes]
+   17  name=Kubernetes
+   18  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+   19  enabled=1
+   20  gpgcheck=1
+   21  repo_gpgcheck=1
+   22  gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+   23  EOF
+   24  cat /etc/yum.repos.d/kubernetes.repo
+   25  yum install -y kubectl
+   26  sudo setenforce 0
+   27  sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+   28  yum install -y kubelet-1.20.0-0 kubeadm-1.20.0-0 kubectl-1.20.0-0
+   29  systemctl enable kubelet
+   30  systemctl start kubelet
+   31  ip addr
+   32  kubeadm init --apiserver-advertise-address=10.190.0.3 --pod-network-cidr=192.168.0.0/16
+   33  mkdir -p $HOME/.kube
+   34  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   35  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   36  history 
+   37  kubectl get services 
+   38  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+   39  kubectl get services 
+   40  rpm -qa | grep kube
+   41  yum install git -y
+   42  history > kubernetesmasterdeployment-sequence-imp.txt
+   43  ll
+   44  mkdir kubemasterdeploy
+   45  mv kubernetesmasterdeployment-sequence-imp.txt kubemasterdeploy/
+   46  ll
+   47  cd kubemasterdeploy/
+   48  git init
+   49  git add .
+   50  git commit -m "Kubernetes Master deployment sequence is IMPORTANT"
+   51  git remote add origin https://github.com/chandan26/KubernetesSetup.git
+   52  git push -u origin main
+   53  git checkout main
+   54  git config --global user.name chandan26
+   55  git push -u origin main
+   56  git pull
+   57  ll
+   58  llgit branch --set-upstream-to=origin/ master
+   59  git branch --set-upstream-to=origin/ master
+   60  git branch --set-upstream-to=origin/master
+   61  git branch --set-upstream-to=origin/main
+   62  git pull
+   63  git add .
+   64  git commit -m "Kubernetes Master deployment sequence is IMPORTANT"
+   65  git push -u origin main
+   66  git checkout main
+   67  git push -u origin main
+   68  ll
+   69  history > kubernetesmasterdeployment-sequence-imp.txt
+   70  ll
+   71  git push -u origin main
+   72  git push -u origin master
+   73  git checkout main
+   74  git checkout master
+   75  ll
+   76  git push -u origin main
+   77  git commit 
+   78  git add .
+   79  git commit -m "Kubernetes Master deployment sequence is IMPORTANT"
+   80  git push -u origin main
+   81  ll
+   82  git rm masternodehistory.txt 
+   83  git commit -m "Final"
+   84  git push -u origin main
+   85  history > kubecommandfile-git-push-merge.txt
