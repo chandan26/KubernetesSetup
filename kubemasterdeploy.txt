@@ -1,0 +1,60 @@
+    1   sudo yum install -y yum-utils
+    2  sudo yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+    3  sudo yum install docker-ce docker-ce-cli containerd.io
+    4  systemctl enable docker
+    5  rpm -qa | grep docker
+    6  sudo yum install -y yum-utils
+    7  systemctl enable docker
+    8  systemctl start docker
+    9  docker pull docker/whalesay
+   10  docker run docker/whalesay cowsay whoooo
+   11  docker run docker/whalesay cowsay lmao
+   12  docker ps -a
+   13  cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+   14  [kubernetes]
+   15  name=Kubernetes
+   16  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+   17  enabled=1
+   18  gpgcheck=1
+   19  repo_gpgcheck=1
+   20  gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+   21  EOF
+   22  yum install -y kubectl
+   23  sudo setenforce 0
+   24  sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+   25  yum install -y kubelet-1.20.0-0 kubeadm-1.20.0-0 kubectl-1.20.0-0
+   26  systemctl enable kubelet
+   27  systemctl start kubelet
+   28  kubeadm init --apiserver-advertise-address=10.190.0.5 --pod-network-cidr=192.168.0.0/16
+   29  echo 1 > /proc/sys/net/ipv4/ip_forward
+   30  cat /proc/sys/net/ipv4/ip_forward
+   31  cat /etc/selinux/config
+   32  vi /etc/selinux/config 
+   33  cat /etc/selinux/config
+   34  systemctl status kubelet
+   35  ip a
+   36  kubeadm init --apiserver-advertise-address=10.190.0.2 --pod-network-cidr=192.168.0.0/16
+   37  yum install -y kubele kubeadm kubectl
+   38  kubeadm init --apiserver-advertise-address=10.190.0.2 --pod-network-cidr=192.168.0.0/16
+   39  kubeadm reset
+   40  kubeadm init --apiserver-advertise-address=10.190.0.2 --pod-network-cidr=192.168.0.0/16
+   41  mkdir -p $HOME/.kube
+   42  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   43  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   44  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+   45  rpm -qa | grep kube
+   46  kubeadm token create --print-join-command
+   47  kubelet get nodes
+   48  kubectl get nodes
+   49  kubeadm token create --print-join-command
+   50  kubectl get nodes
+   51  passwd
+   52  systemctl restart sshd
+   53  kubectl get nodes
+   54  kubectl get po
+   55  cd /var/tmp/
+   56  ls -lrth
+   57  kubectl get svc
+   58  mkdir chandan
+   59  cd chandan/
+   60  ls -lrth
