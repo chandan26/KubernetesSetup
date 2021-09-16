@@ -40,6 +40,7 @@
    40  rpm -qa | grep kube
    41  yum install git -y
    42  history > kubernetesmasterdeployment-sequence-imp.txt
+<<<<<<< HEAD
    43  ll
    44  mkdir kubemasterdeploy
    45  mv kubernetesmasterdeployment-sequence-imp.txt kubemasterdeploy/
@@ -67,3 +68,5 @@
    67  git push -u origin main
    68  ll
    69  history > kubernetesmasterdeployment-sequence-imp.txt
+=======
+>>>>>>> 8b82efbc168c4f603f2b221b5dda4ef8086bca2a
