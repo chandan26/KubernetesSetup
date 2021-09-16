@@ -1,0 +1,68 @@
+   46  kubectl get nodes
+   47  cd
+   48  passwd
+   49  apt-cache madison kubeadm | grep 1.19
+   50  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep 1.19
+   51  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep 1.20
+   52  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep 1.21
+   53  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep 1.22
+   54  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep 1.23
+   55  kubeadm version
+   56  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep Version | awk '{print $2}'
+   57  clear
+   58  history 
+   59  history | grep -i advertise
+   60  kubeadm upgrade plan
+   61  lsmod | grep br_netfilter
+   62  docker run hello-world
+   63  kubeadm version
+   64  kubectl get nodes
+   65  k get all
+   66  kubectl get all
+   67  mkdir /kubenetes-yml
+   68  ll
+   69  cd /
+   70  ll
+   71  cd kubenetes-yml/
+   72  kubectl create deploy myservicedep --image=httpd --replicas=3 --dryrun=client -o yaml >16_9_21-1deployment.yml
+   73  kubectl create deploy myservicedep --image=httpd --replicas=3 --dry-run=client -o yaml >16_9_21-1deployment.yml
+   74  ll
+   75  cat 16_9_21-1deployment.yml 
+   76  k get all
+   77  alias
+   78  l.
+   79  cd ..
+   80  ll
+   81  cd kubenetes-yml/
+   82  ll
+   83  vi 16_9_21-2-deployment.yml
+   84  cat 16_9_21-2-deployment.yml 
+   85  alias
+   86  yum install -y bash-completion
+   87  source /etc/profile.d/bash_completion.sh
+   88  kubectl create -f 16_9_21-2-deployment.yml 
+   89  cat 16_9_21-2-deployment.yml 
+   90  vi 16_9_21-2-deployment.yml
+   91  kubectl create -f 16_9_21-2-deployment.yml 
+   92  kubectl get pod
+   93  kubectl get nodes
+   94  kubectl get pod --wide -o
+   95  kubectl get --help
+   96  kubectl get pod wide -o
+   97  kubectl get pod -o
+   98  kubectl get pod wide 
+   99  kubectl get pod --help
+  100  kubectl get pods -o wide
+  101  vi replica-set-pods.yml
+  102  kubectl create -f replica-set-pods.yml 
+  103  vi replica-set-pods.yml
+  104  kubectl create -f replica-set-pods.yml 
+  105  cat -n *
+  106  vi replica-set-pods.yml
+  107  kubectl create -f replica-set-pods.yml 
+  108  kubectl get pods
+  109  kubectl get pods -o wide
+  110  rpm -qa | grep git
+  111  pwd
+  112  history 
+  113  history | tail -n 68 >>16-9-21-kubehistory.txt

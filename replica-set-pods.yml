@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myreplicaset
+  labels:
+    app: chandan-app
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: chandan-app
+  template:
+    metadata:
+     name: my-pod
+     labels:
+      app: chandan-app
+    spec:
+      containers:
+      - name: my-container
+        image: httpd:latest
+    
+    
