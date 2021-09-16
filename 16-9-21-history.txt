@@ -1,0 +1,152 @@
+    1  cd
+    2  vi /etc/ssh/sshd_config 
+    3  passwd
+    4  systemctl restart sshd
+    5  systemctl enable sshd
+    6  sudo yum install -y yum-utils
+    7  sudo yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+    8  yum install docker-ce docker-ce-cli containerd.io
+    9  systemctl enable docker
+   10  rpm -qa | grep docker
+   11  systemctl start docker
+   12  cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+   13  [kubernetes]
+   14  name=Kubernetes
+   15  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+   16  enabled=1
+   17  gpgcheck=1
+   18  repo_gpgcheck=1
+   19  gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+   20  EOF
+   21  cat /etc/yum.repos.d/kubernetes.repo
+   22  yum install -y kubectl
+   23  sudo setenforce 0
+   24  sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+   25  yum install -y kubelet-1.20.0-0 kubeadm-1.20.0-0 kubectl-1.20.0-0
+   26  systemctl enable kubelet
+   27  systemctl start kubelet
+   28  ip addr
+   29  kubeadm init --apiserver-advertise-address=10.190.0.4 --pod-network-cidr=192.168.0.0/16
+   30  kubeadm token create --print-join-command
+   31  kubectl get nodes
+   32  kubeadm reset
+   33  history 
+   34  kubeadm init --apiserver-advertise-address=10.190.0.4 --pod-network-cidr=192.168.0.0/16
+   35  mkdir -p $HOME/.kube
+   36  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   37  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   38  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+   39  kubeadm token create --print-join-command
+   40  kubectl get nodes
+   41  source <(kubectl completion bash)
+   42  echo "source <(kubectl completion bash)" >> ~/.bashrc
+   43  alias k=kubectl
+   44  complete -F __start_kubectl k
+   45  kubectl  config view
+   46  kubectl get nodes
+   47  cd
+   48  passwd
+   49  apt-cache madison kubeadm | grep 1.19
+   50  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep 1.19
+   51  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep 1.20
+   52  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep 1.21
+   53  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep 1.22
+   54  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep 1.23
+   55  kubeadm version
+   56  yum list --showduplicates kubeadm --disableexcludes=kubernetes | grep Version | awk '{print $2}'
+   57  clear
+   58  history 
+   59  history | grep -i advertise
+   60  kubeadm upgrade plan
+   61  lsmod | grep br_netfilter
+   62  docker run hello-world
+   63  kubeadm version
+   64  kubectl get nodes
+   65  k get all
+   66  kubectl get all
+   67  mkdir /kubenetes-yml
+   68  ll
+   69  cd /
+   70  ll
+   71  cd kubenetes-yml/
+   72  kubectl create deploy myservicedep --image=httpd --replicas=3 --dryrun=client -o yaml >16_9_21-1deployment.yml
+   73  kubectl create deploy myservicedep --image=httpd --replicas=3 --dry-run=client -o yaml >16_9_21-1deployment.yml
+   74  ll
+   75  cat 16_9_21-1deployment.yml 
+   76  k get all
+   77  alias
+   78  l.
+   79  cd ..
+   80  ll
+   81  cd kubenetes-yml/
+   82  ll
+   83  vi 16_9_21-2-deployment.yml
+   84  cat 16_9_21-2-deployment.yml 
+   85  alias
+   86  yum install -y bash-completion
+   87  source /etc/profile.d/bash_completion.sh
+   88  kubectl create -f 16_9_21-2-deployment.yml 
+   89  cat 16_9_21-2-deployment.yml 
+   90  vi 16_9_21-2-deployment.yml
+   91  kubectl create -f 16_9_21-2-deployment.yml 
+   92  kubectl get pod
+   93  kubectl get nodes
+   94  kubectl get pod --wide -o
+   95  kubectl get --help
+   96  kubectl get pod wide -o
+   97  kubectl get pod -o
+   98  kubectl get pod wide 
+   99  kubectl get pod --help
+  100  kubectl get pods -o wide
+  101  vi replica-set-pods.yml
+  102  kubectl create -f replica-set-pods.yml 
+  103  vi replica-set-pods.yml
+  104  kubectl create -f replica-set-pods.yml 
+  105  cat -n *
+  106  vi replica-set-pods.yml
+  107  kubectl create -f replica-set-pods.yml 
+  108  kubectl get pods
+  109  kubectl get pods -o wide
+  110  rpm -qa | grep git
+  111  pwd
+  112  history 
+  113  history | tail -n 68 >>16-9-21-kubehistory.txt
+  114  ll
+  115  git init
+  116  yum install git -y
+  117  git init
+  118  git add .
+  119  git commit -m "Firstday Kubernetes pod and Replicaset"
+  120  git remote add origin https://github.com/chandan26/KubernetesSetup.git
+  121  git push -u origin main
+  122  git  checkout main
+  123  git push -u origin main
+  124  git branch --set-upstream-to=origin/ master
+  125  git status
+  126  ls
+  127  git add .
+  128  git push -u origin main
+  129  git push -u origin master
+  130  git pull
+  131  git branch --set-upstream-to=origin/main
+  132  ll
+  133  git add .
+  134  git status
+  135  git commit -m "Firstday Kubernetes pod and Replicaset"
+  136  git push -u origin main
+  137  git pull origin main
+  138  ll
+  139  git push -u origin main
+  140  git add .
+  141  git commit -m "Firstday Kubernetes pod and Replicaset"
+  142  git remote add origin https://github.com/chandan26/KubernetesSetup.git
+  143  git push -u origin main
+  144  git push -u origin master
+  145  git pul
+  146  git pull
+  147  git push
+  148  git push -u origin main
+  149  git status
+  150  git push
+  151  ll
+  152  history >> 16-9-21-history.txt
